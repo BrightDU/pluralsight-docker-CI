@@ -1,14 +1,13 @@
 version: 2
-workflows:
-  jobs:
-    test:
-      override:    
-        - mocha
-    deployment:
-      dockerhub:
-        branch: master
-        commands:
-          - $DOCKER_HUB_TRIGGER
+jobs:
+  test:
+    override:    
+      - mocha
+  deployment:
+    dockerhub:
+      branch: master
+      commands:
+        - $DOCKER_HUB_TRIGGER
 
 
 
